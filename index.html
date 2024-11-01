@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simply Recipes || Final</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <!-- normalize -->
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <!-- font-awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+  <!-- main css -->
+  <link rel="stylesheet" href="./css/main.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Add custom fonts and basic styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    h1, .footer-logo {
+      font-family: 'Lobster', cursive;
+      color: #ff4500; /* Updated color for "Simply Recipes" */
+      font-size: 3rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      color: #ff4500; /* Updated color for hero title */
+      animation: slideIn 1s ease-out;
+    }
+
+    .hero h4 {
+      color: #20b2aa; /* Updated color for "no fluff, just recipes" */
+      font-weight: 300;
+      font-style: italic;
+      margin-top: 0.5rem;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    /* Recipes section title */
+    .tags-container h4 {
+      color: #ff6347; /* Updated color for "recipes" heading */
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    /* Hover effect on nav links */
+    .nav-link:hover {
+      color: #ff6347;
+      transition: color 0.3s ease-in-out;
+    }
+
+    /* Recipe Card Styles */
+    .recipes-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .recipe {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    .recipe:hover {
+      transform: scale(1.05);
+    }
+
+    .recipe h5 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ff4500; /* Font color for recipe titles */
+      margin: 0.5rem 0;
+      font-family: 'Lobster', cursive;
+    }
+
+    .recipe p {
+      color: #6b705c; /* Font color for recipe details */
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    /* Footer Styling */
+    .page-footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .footer-logo {
+      font-family: 'Lobster', cursive;
+      color: #ff4500; /* Same color as the hero title */
+      font-size: 1rem;
+    }
+
+    .page-footer p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #eee;
+    }
+
+    .page-footer a {
+      color: #ff4500;
+      text-decoration: none;
+    }
+
+    .page-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animation for hero section */
+    @keyframes slideIn {
+      0% {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- nav  -->
+  <nav class="navbar">
+    <div class="nav-center">
+      <div class="nav-header">
+        <a href="index.html" class="nav-logo">
+          <img src="./assets/logo.svg" alt="simply recipes" />
+        </a>
+        <button class="nav-btn btn">
+          <i class="fas fa-align-justify"></i>
+        </button>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="tags.html" class="nav-link">Tags</a>
+        <a href="recipes.html" class="nav-link">Recipes</a>
+        <div class="nav-link contact-link">
+          <a href="contact.html" class="btn">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- end of nav -->
+
+  <!-- main -->
+  <main class="page">
+    <!-- header -->
+    <header class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1>Simply Recipes</h1>
+          <h4>No fluff, just recipes</h4>
+        </div>
+      </div>
+    </header>
+    <!-- end of header -->
+
+    <section class="recipes-container">
+      <!-- tag container -->
+      <div class="tags-container">
+        <h4>Recipes</h4>
+        <div class="tags-list">
+          <a href="tag-template.html">Beef (1)</a>
+          <a href="tag-template.html">Breakfast (2)</a>
+          <a href="tag-template.html">Carrots (3)</a>
+          <a href="tag-template.html">Food (4)</a>
+        </div>
+      </div>
+      <!-- end of tag container -->
+
+      <!-- recipes list -->
+      <div class="recipes-list">
+        <a href="single-recipe.html" class="recipe">
+          <img src="./assets/recipes/recipe-1.jpeg" class="img recipe-img" alt="Carne Asada" />
+          <h5>Carne Asada</h5>
+          <p>Prep: 15min | Cook: 5min</p>
+        </a>
+        <a href="single-recipe.html" class="recipe">
+          <img src="./assets/recipes/recipe-2.jpeg" class="img recipe-img" alt="Greek Ribs" />
+          <h5>Greek Ribs</h5>
+          <p>Prep: 15min | Cook: 5min</p>
+        </a>
+        <a href="single-recipe.html" class="recipe">
+          <img src="./assets/recipes/recipe-3.jpeg" class="img recipe-img" alt="Vegetable Soup" />
+          <h5>Vegetable Soup</h5>
+          <p>Prep: 15min | Cook: 5min</p>
+        </a>
+        <a href="single-recipe.html" class="recipe">
+          <img src="./assets/recipes/recipe-4.jpeg" class="img recipe-img" alt="Banana Pancakes" />
+          <h5>Banana Pancakes</h5>
+          <p>Prep: 15min | Cook: 5min</p>
+        </a>
+      </div>
+      <!-- end of recipes list -->
+    </section>
+  </main>
+  <!-- end of main -->
+
+  <!-- footer -->
+  <footer class="page-footer">
+    <p>
+      &copy; <span id="date"></span>
+      <span class="footer-logo">SimplyRecipes</span> Built by
+      <a href="https://www.johnsmilga.com/">Coding Addict</a>
+    </p>
+  </footer>
+  
+  <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Recipe || Final</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <style>
+      /* Additional styles for floating text and animations */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f9fc;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .recipe-page {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 1rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .recipe-hero {
+        position: relative;
+        text-align: center;
+      }
+
+      .recipe-hero img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        animation: fadeIn 1s;
+      }
+
+      .recipe-info {
+        padding: 1rem;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 2rem;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      p {
+        margin: 1rem 0;
+      }
+
+      .recipe-icons {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0;
+      }
+
+      .recipe-icons article {
+        text-align: center;
+      }
+
+      .recipe-icons i {
+        font-size: 1.5rem;
+        color: #007bff;
+      }
+
+      .recipe-tags {
+        margin: 1rem 0;
+      }
+
+      .recipe-tags a {
+        margin-right: 0.5rem;
+        color: white; /* Changed color to white */
+        text-decoration: none;
+      }
+
+      .recipe-tags a:hover {
+        text-decoration: underline;
+      }
+
+      .recipe-content {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .single-instruction,
+      .single-ingredient,
+      .single-tool {
+        margin: 1rem 0;
+        padding: 0.5rem;
+        border-left: 4px solid #007bff;
+        background: #f0f4f8;
+        border-radius: 5px;
+        transition: transform 0.2s;
+      }
+
+      .single-instruction:hover,
+      .single-ingredient:hover,
+      .single-tool:hover {
+        transform: translateX(5px);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      /* Footer Styling */
+      .page-footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #333; /* Changed footer background color */
+        color: white; /* Changed text color to white */
+        position: relative;
+      }
+
+      .footer-logo {
+        font-weight: bold;
+        color: white; /* Changed color for 'SimplyRecipes' to white */
+      }
+
+      .footer-logo a {
+        color: white; /* Ensure the link color is also white */
+        text-decoration: none;
+      }
+
+      .footer-logo a:hover {
+        text-decoration: underline;
+      }
+
+      /* Additional styles for the below footer text */
+      .below-footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #007bff; /* Make sure below footer has a different color */
+        color: white; /* Change text color to white */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="./assets/logo.svg" alt="simply recipes" />
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link"> Home </a>
+          <a href="about.html" class="nav-link"> About </a>
+          <a href="tags.html" class="nav-link"> Tags </a>
+          <a href="recipes.html" class="nav-link"> Recipes </a>
+          <div class="nav-link contact-link">
+            <a href="contact.html" class="btn"> Contact </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+    <main class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="./assets/recipes/recipe-4.jpeg"
+            class="img recipe-hero-img"
+          />
+          <article class="recipe-info">
+            <h2>Fluffy Banana Pancakes</h2>
+            <p>
+              Indulge in these fluffy banana pancakes that are not only delicious but also super easy to whip up! Perfect for breakfast or brunch, they will delight both kids and adults alike. Top with syrup, honey, or fresh fruit for an unforgettable treat!
+            </p>
+            <div class="recipe-icons">
+              <article>
+                <i class="fas fa-clock"></i> <!-- Icon for prep time -->
+                <h5>Prep Time</h5>
+                <p>30 min</p>
+              </article>
+              <article>
+                <i class="fas fa-fire"></i> <!-- Unique fire icon for cooking -->
+                <h5>Cook Time</h5>
+                <p>15 min</p>
+              </article>
+              <article>
+                <i class="fas fa-utensils"></i> <!-- Unique utensils icon for serving -->
+                <h5>Serving</h5>
+                <p>6 servings</p>
+              </article>
+            </div>
+            <p class="recipe-tags">
+              Tags : <a href="tag-template.html">Breakfast</a>
+              <a href="tag-template.html">Pancakes</a>
+              <a href="tag-template.html">Food</a>
+            </p>
+          </article>
+        </section>
+        <!-- content -->
+        <section class="recipe-content">
+          <article>
+            <h4>Instructions</h4>
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>Step 1: Prepare the Batter</p>
+                <div></div>
+              </header>
+              <p>
+                In a large mixing bowl, combine the pancake mix and flax seed meal. Gradually whisk in the skim milk until the batter is smooth and free of lumps. Let it rest for a few minutes while you heat the skillet.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>Step 2: Heat the Skillet</p>
+                <div></div>
+              </header>
+              <p>
+                Heat a non-stick skillet over medium heat. Lightly grease the pan with cooking spray or a bit of butter. Pour 1/4 cup of batter onto the skillet for each pancake, allowing space between them.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>Step 3: Cook to Perfection</p>
+                <div></div>
+              </header>
+              <p>
+                Cook until bubbles form on the surface and the edges look set, about 2-3 minutes. Flip carefully and cook for another 2-3 minutes until golden brown. Keep warm in a low oven while you repeat with the remaining batter.
+              </p>
+            </div>
+            <!-- end of single instruction -->
+            <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>Step 4: Serve & Enjoy</p>
+                <div></div>
+              </header>
+              <p>
+                Stack the pancakes high and serve warm with your favorite toppings: syrup, sliced bananas, berries, or a dollop of whipped cream for a special touch!
+              </p>
+            </div>
+            <!-- end of single instruction -->
+          </article>
+          <article class="second-column">
+            <div>
+              <h4>Ingredients</h4>
+              <p class="single-ingredient">1 1/2 cups pancake mix</p>
+              <p class="single-ingredient">1 tbsp flax seed meal</p>
+              <p class="single-ingredient">1 1/4 cups skim milk</p>
+              <p class="single-ingredient">1 tbsp butter, melted</p>
+              <p class="single-ingredient">1 banana, mashed</p>
+              <p class="single-ingredient">Cooking spray</p>
+            </div>
+            <div>
+              <h4>Tools</h4>
+              <p class="single-tool">Hand Blender</p>
+              <p class="single-tool">Large Heavy Pot With Lid</p>
+              <p class="single-tool">Measuring Spoons</p>
+              <p class="single-tool">Measuring Cups</p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        &copy; <span id="date"></span>
+        <span class="footer-logo">SimplyRecipes</span> Built by
+        <a href="https://www.johnsmilga.com/" target="_blank">Coding Addict</a>
+      </p>
+    </footer>
+    <div class="below-footer">
+      <p>SimplyRecipes | Coding Addict</p>
+    </div>
+    <script>
+      // Date display script
+      const date = document.getElementById("date");
+      date.innerHTML = new Date().getFullYear();
+    </script>
+  </body>
+</html>

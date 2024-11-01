@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tags || Final</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- font-awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            margin: 0;
+            color: #343a40;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #ffffff; /* Updated header color */
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+        }
+
+        .nav-center {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .nav-logo img {
+            height: 50px;
+        }
+
+        .nav-link {
+            color: #007bff; /* Header link color */
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            color: #0056b3; /* Hover effect */
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            color: #007bff; /* Button color */
+            cursor: pointer;
+        }
+
+        .tags-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .tag {
+            background-color: #ffffff;
+            border: 1px solid #007bff;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .tag::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 5px;
+            background-color: #007bff;
+            border-radius: 10px;
+        }
+
+        .tag:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            background-color: #f0f8ff; /* Light hover effect */
+        }
+
+        .tag h5 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #007bff;
+        }
+
+        .tag p {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .page-footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+
+        .footer-logo {
+            font-weight: bold;
+        }
+
+        .page-footer a {
+            color: #ffc107;
+            text-decoration: underline;
+        }
+
+        .page-footer a:hover {
+            color: #e0e0e0;
+        }
+
+        @media (max-width: 600px) {
+            .tags-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tag {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- nav  -->
+    <nav class="navbar">
+        <div class="nav-center">
+            <div class="nav-header">
+                <a href="index.html" class="nav-logo">
+                    <img src="./assets/logo.svg" alt="Simply Recipes" />
+                </a>
+                <button class="nav-btn btn">
+                    <i class="fas fa-align-justify"></i>
+                </button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"> Home </a>
+                <a href="about.html" class="nav-link"> About </a>
+                <a href="tags.html" class="nav-link"> Tags </a>
+                <a href="recipes.html" class="nav-link"> Recipes </a>
+                <div class="nav-link contact-link">
+                    <a href="contact.html" class="btn"> Contact </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end of nav -->
+    <main class="page">
+        <section class="tags-wrapper">
+            <!-- single tag -->
+            <a href="tag-template.html" class="tag">
+                <h5>Beef</h5>
+                <p>1 recipe</p>
+            </a>
+            <!-- end of single tag -->
+            <!-- single tag -->
+            <a href="tag-template.html" class="tag">
+                <h5>Breakfast</h5>
+                <p>2 recipes</p>
+            </a>
+            <!-- end of single tag -->
+            <!-- single tag -->
+            <a href="tag-template.html" class="tag">
+                <h5>Carrots</h5>
+                <p>3 recipes</p>
+            </a>
+            <!-- end of single tag -->
+            <!-- single tag -->
+            <a href="tag-template.html" class="tag">
+                <h5>Dinner</h5>
+                <p>4 recipes</p>
+            </a>
+            <!-- end of single tag -->
+            <!-- single tag -->
+            <a href="tag-template.html" class="tag">
+                <h5>Food</h5>
+                <p>1 recipe</p>
+            </a>
+            <!-- end of single tag -->
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer">
+        <p>
+            &copy; <span id="date"></span>
+            <span class="footer-logo">SimplyRecipes</span> Built by
+            <a href="https://www.johnsmilga.com/">Coding Addict</a>
+        </p>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+</html>
